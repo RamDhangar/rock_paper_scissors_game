@@ -1,0 +1,16 @@
+.container{
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: aquamarine;
+    padding:10px;
+    text-align: center;
+}
+.btnShow{
+    margin-top: 15px;
+    display: none;
+}
+#play{
+    margin-top: 20px;
+}
