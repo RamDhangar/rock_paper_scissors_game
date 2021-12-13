@@ -6,6 +6,28 @@
     background-color: aquamarine;
     padding:10px;
     text-align: center;
+    border: black dotted 2px;
+    border-radius: 15px;
+    animation: forwards;
+}
+input{
+    background-color: rgb(80, 119, 87);
+    border-radius: 5px;
+    height: 20px;
+    animation: forwards;
+    color: wheat;
+}
+#play{
+    width: 100px;
+    height: 30px;
+    background-color: crimson;
+}
+.btnShow button{
+    background-color: blue;
+    height: 30px;
+    width: 70px;
+    border: blueviolet double 5px;
+    border-radius: 10px;
 }
 .btnShow{
     margin-top: 15px;

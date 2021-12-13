@@ -4,8 +4,12 @@ var userPoint=0;
 var round=0;
 var fix=0;
 document.getElementById("play").addEventListener('click',()=>{
-    inputValue=document.getElementById("input").value;
-    fix=inputValue;
+            document.getElementById("winner").innerHTML="";
+            computerPoint=0;
+            userPoint=0;
+            round=0;
+            inputValue=document.getElementById("input").value;
+            fix=inputValue;
     if(inputValue>0){
         
     document.getElementsByClassName("showResult")[0].innerHTML="";
