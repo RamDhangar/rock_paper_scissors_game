@@ -3,6 +3,7 @@ var computerPoint=0;
 var userPoint=0;
 var round=0;
 var fix=0;
+
 document.getElementById("play").addEventListener('click',()=>{
             document.getElementById("winner").innerHTML="";
             computerPoint=0;
@@ -20,17 +21,14 @@ document.getElementById("play").addEventListener('click',()=>{
         document.getElementsByClassName("showResult")[0].innerHTML="Please enter teruns";
         document.getElementById("input").focus();
     }
-    console.log(inputValue)
 });
-    
-        console.log(inputValue);
+
         document.getElementById("rock"). addEventListener('click', rockFun);
         document.getElementById("scissors").addEventListener('click', scissorsFun);
         document.getElementById("paper").addEventListener('click', paperFun);
         
 
 let showResult=document.getElementsByClassName("showResult");
-console.log(showResult)
 
 function generateRandom(){
     let rd= Math.floor(Math.random()*3);
@@ -79,13 +77,17 @@ function rockFun(){
         showResult[0].innerHTML="Computer choice is Scissors"
         showResult[1].innerHTML="User choice is Rock";
         showResult[2].innerHTML="User win";
+        document.getElementById("user-point").innerHTML=userPoint;
+        document.getElementById("computer-point").innerHTML=computerPoint;
     }
     else {
         showResult[0].innerHTML=`Computer choice is ${computerchoice}`
         showResult[1].innerHTML="User choice is Rock";
         showResult[2].innerHTML="game drow";
+        
+        document.getElementById("user-point").innerHTML=userPoint;
+        document.getElementById("computer-point").innerHTML=computerPoint;
     }
-
     winnerResult();
 }
 
@@ -96,17 +98,23 @@ function scissorsFun(){
         showResult[0].innerHTML="Computer choice is Rock"
         showResult[1].innerHTML="User choice is Scissors";
         showResult[2].innerHTML="Computer win";
+        document.getElementById("user-point").innerHTML=userPoint;
+        document.getElementById("computer-point").innerHTML=computerPoint;
     }
     else if(computerchoice==="paper"){
         userPoint++;
         showResult[0].innerHTML="Computer choice is Paper"
         showResult[1].innerHTML="User choice is Scissors";
         showResult[2].innerHTML="User win";
+        document.getElementById("user-point").innerHTML=userPoint;
+        document.getElementById("computer-point").innerHTML=computerPoint;
     }
     else {
         showResult[0].innerHTML="Computer choice is Scissors"
         showResult[1].innerHTML="User choice is Scissors";
         showResult[2].innerHTML="game drow";
+        document.getElementById("user-point").innerHTML=userPoint;
+        document.getElementById("computer-point").innerHTML=computerPoint;
     }
     winnerResult();
 }
@@ -118,12 +126,16 @@ function paperFun(){
         showResult[0].innerHTML="Computer choice is Scissors"
         showResult[1].innerHTML="User choice is Paper";
         showResult[2].innerHTML="Computer win";
+        document.getElementById("user-point").innerHTML=userPoint;
+        document.getElementById("computer-point").innerHTML=computerPoint;
     }
     else {
         
         showResult[0].innerHTML=`Computer choice is ${computerchoice}`
         showResult[1].innerHTML="User choice is Paper";
         showResult[2].innerHTML="game drow";
+        document.getElementById("user-point").innerHTML=userPoint;
+        document.getElementById("computer-point").innerHTML=computerPoint;
     }
     winnerResult();
 }
